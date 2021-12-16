@@ -1,32 +1,43 @@
 package OrientaçãoAoObjeto;
 
-import java.util.Scanner;
-
 public class Cliente {
 
+	private String nome;
+	private int id;
+	private int cpf;
 	
-	public Cliente(String nome, int cpf, int id) {
-		// TODO Auto-generated constructor stub
+	public Cliente (String nome,int cpf,int id) {
+		
+		this.nome=nome;
+		this.cpf = cpf;
+		this.id = id;
+	}
+	
+	public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 
-	public static void main(String[] args) {
+	public int getcpf() {
+		return getcpf();
+	}
 
-		Scanner in = new Scanner(System.in);
+	public void setIdade(int cpf) {
+		this.cpf = cpf;
+	}
 
-		int cpf;
-		int id;
-		String nome;
+	public int getId() {
+		return id;
+	}
 
-		System.out.println("Digite o nome do cliente:");
-		nome = in.nextLine();
-		System.out.println("Digite o CPF do cliente:");
-		cpf = in.nextInt();
-		System.out.println("Digite o ID do cliente:");
-		id = in.nextInt();
-
-		Cliente cliente = new Cliente(nome, cpf, id);
-
-		System.out.println(cliente);
-		in.close();
+	public void setId(int id) {
+		this.id = id;
+	}
+	
+	@Override
+	public String toString() {
+		return "Cliente:\nNome: " + nome + ", CPF: " + cpf + ", ID: " + id;
 	}
 }
